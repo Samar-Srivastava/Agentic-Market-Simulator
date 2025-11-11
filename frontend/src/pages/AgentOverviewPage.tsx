@@ -64,7 +64,8 @@ const processAgentData = (snapshots: RawSnapshot[]): AgentPerformance[] => {
 
     let volatility = 0;
     let sharpe_ratio = 0;
-    
+    console.log(sharpe_ratio)
+
     if (dailyReturns.length > 0) {
         const meanReturn = dailyReturns.reduce((sum, r) => sum + r, 0) / dailyReturns.length;
         

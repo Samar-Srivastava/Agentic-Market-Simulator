@@ -13,7 +13,7 @@ type PlotlyTrace = {
     mode: 'lines';
     name: string;
     line: { color: string, width: number };
-    hoverinfo: string;
+    hoverinfo: 'x+y+name' | 'x+y' | 'name' | 'none';
 };
 
 function usePriceHistory() {

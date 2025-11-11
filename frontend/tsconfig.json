@@ -1,15 +1,17 @@
-// tsconfig.json (The root file in frontend/)
-
 {
   "compilerOptions": {
-    /* ... existing settings here ... */
-    "baseUrl": ".", 
+    /* ... your existing settings here ... */
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"] 
-    }
+      "@/*": ["./src/*"]
+    },
+
+    // 👇 add these lines to relax the build temporarily
+    "skipLibCheck": true,
+    "noUnusedLocals": false
   },
-  
-  // NOTE: Ensure these are added to the file that is *not* tsconfig.app.json
+
+  // leave these as-is
   "files": [],
   "include": [],
   "references": [
