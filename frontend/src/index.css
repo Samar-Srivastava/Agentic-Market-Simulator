@@ -1,0 +1,12 @@
+/* src/index.css */
+
+@tailwind base;        /* Injects Tailwind's Preflight (CSS reset) */
+@tailwind components;  /* Injects component classes (like shadcn/ui styles) */
+@tailwind utilities;   /* Injects all utility classes (flex, p-4, text-red-500) */
+
+/* *** DELETE ALL CODE BELOW THIS LINE *** (The :root, body, h1, button, and @media blocks)
+*/
+
+body {
+  @apply bg-gray-950 text-gray-100 font-sans;
+}

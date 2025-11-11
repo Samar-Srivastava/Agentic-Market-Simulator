@@ -1,0 +1,8 @@
+{
+  "momentum_thresh": 0.005619306991756297,
+  "reversion_thresh": 0.008286109734720276,
+  "trade_qty": 10,
+  "aggressiveness": 0.5279059869582924,
+  "news_sensitivity": 1.4873736818529502,
+  "herd_sensitivity": 0.5283971668935337
+}

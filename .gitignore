@@ -1,0 +1,18 @@
+# Node/Dependency Folders (Frontend and Backend)
+frontend/node_modules
+backend/node_modules
+
+# Python/Environment Files
+backend/__pycache__/
+backend/venv/
+.env
+
+# Backend/Simulation Output (CRITICAL: Prevents pushing logs/heavy models)
+backend/output/
+backend/models/
+*.pyc
+
+# IDE and Build Artifacts
+.vscode/
+/frontend/dist
+/frontend/.vite

@@ -1,0 +1,19 @@
+// tsconfig.json (The root file in frontend/)
+
+{
+  "compilerOptions": {
+    /* ... existing settings here ... */
+    "baseUrl": ".", 
+    "paths": {
+      "@/*": ["./src/*"] 
+    }
+  },
+  
+  // NOTE: Ensure these are added to the file that is *not* tsconfig.app.json
+  "files": [],
+  "include": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

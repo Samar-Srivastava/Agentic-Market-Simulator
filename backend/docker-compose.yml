@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: .
+    container_name: market_backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - ./output:/app/output
+      - ./models:/app/models
+    environment:
+      - GRPC_VERBOSITY=NONE
+      - GRPC_LOG_SEVERITY_LEVEL=ERROR
+    restart: unless-stopped
