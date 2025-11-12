@@ -7,6 +7,7 @@ import { AgentComparisonChart } from "../components/agents/AgentComparisonChart"
 import { AgentCardGrid } from "../components/agents/AgentCardGrid";
 import { Card, CardContent } from "@/components/ui/card";
 import { Loader2, AlertTriangle, Home} from "lucide-react"; 
+import { getMarketData } from "../api";
 
 interface RawSnapshot {
     Day: number;
@@ -108,16 +109,7 @@ export const AgentOverviewPage: React.FC = () => {
             }
             
             try {
-                const res = await fetch("http://localhost:8000/data/agent_snapshots"); 
-                
-                if (!res.ok) {
-                    if (res.status === 404) {
-                        throw new Error("Simulation results not found. Please run a simulation first.");
-                    }
-                    throw new Error(`Failed to fetch agent performance (Status: ${res.status})`);
-                }
-                
-                const rawData: RawSnapshot[] = await res.json();
+                const rawData: RawSnapshot[] = await getMarketData<RawSnapshot[]>("agent_snapshots"); 
                 const processedData = processAgentData(rawData);
                 
                 setAgents(processedData);
